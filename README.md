@@ -24,28 +24,28 @@ Features
     Robust Search: Supports similarity-based retrieval of information on topics like flood preparation, earthquake safety, and fire response.
 
 -Setup Instructions
-1. Clone the Repository
-   - git clone https://github.com/your-username/emergency-preparedness-chatbot.git
-   - cd emergency-preparedness-chatbot
+  1.Clone the Repository
+  
+    git clone https://github.com/your-username/emergency-preparedness-chatbot.git 
+    cd emergency-preparedness-chatbot
+  2.Set Up a Virtual Environment
+  
+    python -m venv venv 
+    source venv/bin/activate  # On Windows, use venv\Scripts\activate  
 
-3. Set Up a Virtual Environment
-   - python -m venv venv
-   - source venv/bin/activate  # On Windows, use venv\Scripts\activate
-     
-4. Install Dependencies
-
- Install the required packages listed in requirements.txt:
-
-- pip install -r requirements.txt
+  3.Install Dependencies
+  
+    Install the required packages listed in requirements.txt: 
+    pip install -r requirements.txt     
 
 4. Download or Load the Dataset
 
-Ensure you have the emergency_preparedness_data.csv dataset with the Content and Filename columns. Place it in the project directory.
+       Ensure you have the emergency_preparedness_data.csv dataset with the Content and Filename columns. Place it in the project directory.
+
 5. Generate and Save the FAISS Index
-
-If the FAISS index is not already created, run the following script:
-
-- python create_embeddings.py
+   
+       If the FAISS index is not already created, run the following script:
+       python create_embeddings.py
 
 This will generate embeddings for the dataset and save the FAISS index as faiss_index.bin.
 Configuration
