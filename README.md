@@ -13,7 +13,7 @@ Table of Contents
     Contributing
     License
 
-Project Overview
+-Project Overview
 
 The Emergency Preparedness Chatbot is an AI-powered chatbot designed to provide timely and relevant information to users preparing for or responding to various emergencies. It uses advanced machine learning models and a FAISS index to offer efficient, context-aware responses. The chatbot is developed using FastAPI (or Gradio) and can be hosted locally or on a cloud platform.
 Features
@@ -23,28 +23,21 @@ Features
     Conversational Interface: Access the chatbot through a REST API (FastAPI) or a user-friendly Gradio web interface.
     Robust Search: Supports similarity-based retrieval of information on topics like flood preparation, earthquake safety, and fire response.
 
-Setup Instructions
+-Setup Instructions
 1. Clone the Repository
-
-bash
-
-git clone https://github.com/your-username/emergency-preparedness-chatbot.git
-cd emergency-preparedness-chatbot
+ -git clone https://github.com/your-username/emergency-preparedness-chatbot.git
+ -cd emergency-preparedness-chatbot
 
 2. Set Up a Virtual Environment
+   
+ -python -m venv venv
+ -source venv/bin/activate  # On Windows, use venv\Scripts\activate
 
-bash
+4. Install Dependencies
 
-python -m venv venv
-source venv/bin/activate  # On Windows, use venv\Scripts\activate
+ Install the required packages listed in requirements.txt:
 
-3. Install Dependencies
-
-Install the required packages listed in requirements.txt:
-
-bash
-
-pip install -r requirements.txt
+ -pip install -r requirements.txt
 
 4. Download or Load the Dataset
 
@@ -53,9 +46,7 @@ Ensure you have the emergency_preparedness_data.csv dataset with the Content and
 
 If the FAISS index is not already created, run the following script:
 
-bash
-
-python create_embeddings.py
+ -python create_embeddings.py
 
 This will generate embeddings for the dataset and save the FAISS index as faiss_index.bin.
 Configuration
@@ -69,22 +60,16 @@ Usage Guide
 Running the Chatbot with FastAPI
 
     Start the FastAPI server:
-
-    bash
-
-    uvicorn main:app --reload
-
-    Access the API documentation at http://127.0.0.1:8000/docs to interact with the chatbot using the /query/ endpoint.
+    -uvicorn main:app --reload
+    -Access the API documentation at http://127.0.0.1:8000/docs to interact with the chatbot using the /query/ endpoint.
 
 Running the Chatbot with Gradio (Optional)
 
     Start the Gradio interface:
 
-    bash
+    -python gradio_interface.py
 
-    python gradio_interface.py
-
-    A local web interface will open, where you can interact with the chatbot directly.
+    -A local web interface will open, where you can interact with the chatbot directly.
 
 Example Queries
 
@@ -125,10 +110,5 @@ If you would like to contribute to this project, please follow these steps:
     Commit your changes (git commit -m "Add feature").
     Push to the branch (git push origin feature-name).
     Open a Pull Request.
-
-License
-
-This project is licensed under the MIT License. See LICENSE for details.
-Notes
 
 For deployment, consider hosting the chatbot on platforms like Heroku, AWS, or Google Cloud, which support FastAPI applications. Gradio also offers a quick deployment option using Gradio’s shareable links if you’re running the chatbot locally.
