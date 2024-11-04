@@ -1,5 +1,4 @@
-Here’s a sample README.md file for your contextually aware chatbot project. This template includes sections for project overview, setup instructions, configuration, usage guide, and more. You can customize it as needed for your specific project.
-Emergency Preparedness Chatbot
+#Emergency Preparedness Chatbot#
 
 Welcome to the Emergency Preparedness Chatbot, designed to assist users with emergency preparedness information. This chatbot leverages a conversational interface to provide context-aware, informative responses on topics like disaster communications, flood preparation, earthquake safety, and fire safety.
 Table of Contents
