@@ -79,17 +79,19 @@ Project Structure
 
 graphql
 
-emergency-preparedness-chatbot/
-├── data/
-│   └── emergency_preparedness_data.csv   # Dataset file
-├── embeddings/
-│   └── faiss_index.bin                   # Saved FAISS index
-├── main.py                               # Main FastAPI application file
-├── create_embeddings.py                  # Script to generate embeddings and FAISS index
-├── retrieval.py                          # Script to handle query retrieval
-├── gradio_interface.py                   # Optional Gradio interface
-├── requirements.txt                      # List of dependencies
-└── README.md                             # Project documentation
+    emergency-preparedness-chatbot/
+    ├── data/
+    │   └── emergency_preparedness_data.csv   # Dataset file
+    ├── embeddings/
+    │   └── faiss_index.bin                   # Saved FAISS index
+    ├── src/
+    │   ├── main.py                           # FastAPI application for serving the chatbot
+    │   ├── create_embeddings.py              # Script to generate embeddings and save FAISS index
+    │   ├── retrieval.py                      # Script for retrieval logic
+    │   ├── gradio_interface.py               # Gradio interface for interactive chatbot
+    │   └── utils.py                          # Utility functions, including embedding generation
+    ├── requirements.txt                      # List of dependencies
+    └── README.md                             # Project documentation
 
 Testing
 Manual Testing
