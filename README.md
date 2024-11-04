@@ -66,9 +66,9 @@ Running the Chatbot with Gradio (Optional)
 
     Start the Gradio interface:
 
-    -python gradio_interface.py
+    python gradio_interface.py
 
-    -A local web interface will open, where you can interact with the chatbot directly.
+    A local web interface will open, where you can interact with the chatbot directly.
 
 Example Queries
 
