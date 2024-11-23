@@ -1,7 +1,7 @@
 # Emergency Preparedness Chatbot
 
 Welcome to the Emergency Preparedness Chatbot, designed to assist users with emergency preparedness information. This chatbot leverages a conversational interface to provide context-aware, informative responses on topics like disaster communications, flood preparation, earthquake safety, and fire safety.
-Table of Contents
+Table of Contents:
 
     Project Overview
     Features
@@ -11,27 +11,31 @@ Table of Contents
     Project Structure
     Testing
     Contributing
-    License
 
--Project Overview
+### Project Overview
 
 The Emergency Preparedness Chatbot is an AI-powered chatbot designed to provide timely and relevant information to users preparing for or responding to various emergencies. It uses advanced machine learning models and a FAISS index to offer efficient, context-aware responses. The chatbot is developed using FastAPI (or Gradio) and can be hosted locally or on a cloud platform.
-Features
+
+### Features and functionalities
 
     Contextual Awareness: Maintains conversation history to provide responses relevant to previous user queries.
     Efficient Information Retrieval: Uses FAISS indexing to quickly retrieve information from an emergency preparedness dataset.
     Conversational Interface: Access the chatbot through a REST API (FastAPI) or a user-friendly Gradio web interface.
     Robust Search: Supports similarity-based retrieval of information on topics like flood preparation, earthquake safety, and fire response.
+     
+### Setup Instructions
 
--Setup Instructions
-  1.Clone the Repository
+  1.Download the Repository in your computer
   
-    git clone https://github.com/your-username/emergency-preparedness-chatbot.git 
-    cd emergency-preparedness-chatbot
+    Navigate to the main page of the repository on GitHub.
+    Click on the Code button (usually green).
+    Select Download ZIP.
+    The repository will be downloaded as a .zip file that you can extract on your computer.
   2.Set Up a Virtual Environment
   
     python -m venv venv 
     source venv/bin/activate  # On Windows, use venv\Scripts\activate  
+   note: the path you stored the files and the path you opening a virtual environment should be same
 
   3.Install Dependencies
   
@@ -55,27 +59,32 @@ Ensure the following configuration variables are set in your environment if need
     MODEL_PATH: Path to the language model (if fine-tuned or customized).
     API_KEY (optional): API key for any third-party integrations.
 
-Usage Guide
+### Usage Guide
 Running the Chatbot with FastAPI
 
-    Start the FastAPI server:
-    -uvicorn main:app --reload
-    -Access the API documentation at http://127.0.0.1:8000/docs to interact with the chatbot using the /query/ endpoint.
+  Start the FastAPI server:
 
-Running the Chatbot with Gradio (Optional)
+    uvicorn main:app --reload
+ Access the API documentation at http://127.0.0.1:8000/docs to interact with the chatbot using the /query/ endpoint.
 
-    Start the Gradio interface:
+ if OMP: Error #15:
+ 
+    set KMP_DUPLICATE_LIB_OK=TRUE
+    
+Running the Chatbot with query
 
-    python gradio_interface.py
+ Start the query interface
 
-    A local web interface will open, where you can interact with the chatbot directly.
+    python query_interface.py
+    
+ or else follow the link :- http://127.0.0.1:7860/
+ A local web interface will open, where you can interact with the chatbot directly.
 
 Example Queries
 
     User: "How do I prepare for an earthquake?"
-    Chatbot: "To prepare for an earthquake, secure heavy items, create a family plan, and keep emergency kits ready. Would you like more detailed steps?"
 
-Project Structure
+### Project Structure
 
 graphql
 
@@ -93,7 +102,7 @@ graphql
     ├── requirements.txt                      # List of dependencies
     └── README.md                             # Project documentation
 
-Testing
+### Testing
 Manual Testing
 
     Use the FastAPI documentation at http://127.0.0.1:8000/docs to test API responses.
@@ -102,7 +111,7 @@ Manual Testing
 Automated Testing (Optional)
 
 For more rigorous testing, consider writing tests using the pytest framework. Sample tests could include checking if responses are returned within a reasonable time and verifying that the chatbot maintains conversation context.
-Contributing
+### Contributing
 
 If you would like to contribute to this project, please follow these steps:
 
